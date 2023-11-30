@@ -28,7 +28,7 @@ export const client = new ApolloClient({
 });
 ```
 ## Rendering on homepage of the App
-,,,
+```
 import { useQuery, gql } from '@apollo/client';
 
 
