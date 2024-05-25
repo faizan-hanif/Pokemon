@@ -1,36 +1,34 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client';
-
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
 export const client = new ApolloClient({
   // Provide required constructor fields
-  uri: 'https://graphqlpokemon.favware.tech/v8',
+  uri: "https://graphqlpokemon.favware.tech/v8",
   cache: new InMemoryCache(),
 
   // Provide some optional constructor fields
-  name: 'graphql-pokemon-client',
-  version: '1.0',
+  name: "graphql-pokemon-client",
+  version: "1.0",
   queryDeduplication: false,
   defaultOptions: {
     watchQuery: {
-      fetchPolicy: 'cache-and-network'
-    }
-  }
+      fetchPolicy: "cache-and-network",
+    },
+  },
 });
 
 // Supported in React 18+
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <ApolloProvider client={client}>
     <App />
-  </ApolloProvider>,
+  </ApolloProvider>
 );
-
 
 /*root.render(
   <React.StrictMode>
