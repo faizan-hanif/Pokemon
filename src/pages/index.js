@@ -48,7 +48,7 @@ function DisplayPokemon() {
     <a class="pokemon-card" href={`${pokemon.num}`}>
       <img
         class="pokemon-img image-main"
-        alt={`${pokemon.key}`}
+        alt="{pokemon.key}"
         src={`${pokemon.sprite}`}
       />
       <h3 class="pokemon-name">{pokemon.key}</h3>
